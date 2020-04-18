@@ -1,0 +1,116 @@
+ {% load static %}
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+        <title>Sample Project</title>
+         <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+         <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Roboto:400,700,300|Material+Icons">
+         <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Josefin+Sans:100,100i,300,300i,400,400i,600,600i,700,700i">
+         <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" type="text/css">
+         <!--<link href="{% static 'style.css' %}" rel="stylesheet" type="text/css"> -->
+         <link href="{% static 'css/main.css' %}" rel="stylesheet" type="text/css" >
+         <link href="{% static 'css/base.css' %}" rel="stylesheet" type="text/css" >
+
+        <link rel="icon" type="image/png" href="{% static 'images/icons/homepage.png' %}"/>
+        <!-- Bootstrap Core CSS -->
+        <link href="{% static 'css/bootstrap.min.css' %}" rel="stylesheet">
+
+        <!-- MetisMenu CSS -->
+        <link href="{% static 'css/metisMenu.min.css' %}" rel="stylesheet">
+
+        <!-- Timeline CSS -->
+        <link href="{% static 'css/timeline.css' %}" rel="stylesheet">
+
+        <!-- Custom CSS -->
+        <link href="{% static 'css/startmin.css' %}" rel="stylesheet">
+
+        <!-- Morris Charts CSS -->
+        <link href="{% static 'css/morris.css' %}" rel="stylesheet">
+
+        <!-- Custom Fonts -->
+        <link href="{% static 'fonts/font-awesome-4.7.0/css/font-awesome.min.css' %}" rel="stylesheet" type="text/css">
+
+
+        <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+        <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+        <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+        <![endif]-->
+    </head>
+
+
+
+    <body>
+
+        <div id="wrapper">
+
+            <!-- Navigation -->
+            <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+
+
+
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+
+                 </nav>
+
+                 <div id="side-bar">
+                <div class="navbar-default sidebar" role="navigation">
+                    <div class="sidebar-nav navbar-collapse">
+                        <ul class="nav" id="side-menu">
+
+
+                            <li id = "menus">
+                                <a href="/dashboard/"><i class="material-icons ">home</i><p class="menu-heading">Dashboard</p></a>
+                            </li>
+
+
+                             <li>
+                                <a href=""><img class="app-logo2" src="{% static 'images/user-charities.png' %}"><p class="menu-heading">Users</p></a>
+                                <ul class="nav nav-second-level">
+                                    <li>
+                                        <a href="/create_admin/"><i class="fa fa-user"></i><span class="sub-menu">Create Admin</span></a>
+                                    </li>
+                                    <li>
+                                        <a href="/list_admin/"><i class="fa fa-user"></i><span class="sub-menu">Users List</span></a>
+                                    </li>
+                                </ul>
+                            </li>
+
+                           <li><a href="/admin_logout/"><i class="material-icons">exit_to_app</i><p class="menu-heading">Logout</p></a>
+                            </li>
+
+                        </ul>
+                    </div>
+                </div>
+        </div>
+
+
+            <div id="page-wrapper">
+
+                    {% block page_heading %}
+                    {% endblock %}
+
+                    {% block content %}
+                    {% endblock %}
+
+            </div>
+</div>
+        <!-- jQuery -->
+        <script src="{% static 'js/jquery.min.js' %}"></script>
+        <!-- Bootstrap Core JavaScript -->
+        <script src="{% static 'js/bootstrap.min.js' %}"></script>
+        <!-- Metis Menu Plugin JavaScript -->
+        <script src="{% static 'js/metisMenu.min.js' %}"></script>
+        <!-- Custom Theme JavaScript -->
+        <script src="{% static 'js/startmin.js' %}"></script>
+    </body>
+</html>

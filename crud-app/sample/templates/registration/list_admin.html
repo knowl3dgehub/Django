@@ -1,0 +1,104 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block extrastyle %}{{ block.super }}<link rel="stylesheet" type="text/css" href="{% static '/css/style.css' %}" />{% endblock %}
+
+{% block bodyclass %}{{ block.super }} login{% endblock %}
+
+{% block usertools %}{% endblock %}
+
+{% block nav-global %}{% endblock %}
+
+{% block content_title %}{% endblock %}
+
+{% block breadcrumbs %}{% endblock %}
+
+{% block content %}
+
+        <div id="pagewrapper">
+                <div class="row">
+                    <div class="col-md-12" style="margin-top: 4rem;padding-left: -1rem;" >
+                        <div class="card">
+                            <div class="row">
+                                <div class="col-md-10">
+                                    <h1 class="page-header">Admin Users List</h1>
+                                </div>
+
+                                <div class="col-md-2" style="margin-top: 10px;">
+                                    <a href="/create_admin/"><button type="button" class="btn btn-info btn-circle btn-lg"><i class="fa fa-plus"></i></button></a>
+                                </div>
+
+                            </div>
+                            <div class="card-content">
+                                <div class="panel-body">
+                                <div class="table-responsive">
+
+                                    <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for names.." title="Type in a name">
+
+                                    <table class="table table-hover" id = "myTable">
+
+                                        <thead>
+                                            <tr>
+                                                <th>ID</th>
+                                                <th>User Name</th>
+                                                <th>Mobile Number</th>
+                                                 <th>Mail Id</th>
+
+                                                <th>Actions</th>
+                                            </tr>
+                                        </thead>
+                                        {% if object_list%}
+                                            <tbody>
+                                                {% for object in object_list %}
+                                                    <tr>
+                                                        <td>{{object.id}}</td>
+                                                        <td>{{object.username}}</td>
+                                                        <td>{{object.phone_number}}</td>
+                                                        <td>{{object.email}}</td>
+
+
+                                                        <td>
+                                                            <a href="/details_admin/{{ object.id }}/"><i class="fa fa-eye"></i></a>
+                                                            <a href="/update_admin/{{ object.id }}/"><i class="fa fa-edit"></i></a>
+                                                            <a href="/delete_admin/{{ object.id }}/"><i class="fa fa-ban"></i></a>
+                                                        </td>
+                                                    </tr>
+                                                {% endfor %}
+                                            </tbody>
+                                        {% endif %}
+                                    </table>
+                                    <div class="panel-footer">
+                                     {% include 'pagepannel.html' %}
+                                     </div>
+                                </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+        </div>
+
+
+  <script>
+    function myFunction() {
+      var input, filter, table, tr, td, i, txtValue;
+      input = document.getElementById("myInput");
+      filter = input.value.toUpperCase();
+      table = document.getElementById("myTable");
+      tr = table.getElementsByTagName("tr");
+      for (i = 0; i < tr.length; i++) {
+        td = tr[i].getElementsByTagName("td")[0];
+        if (td) {
+          txtValue = td.textContent || td.innerText;
+          if (txtValue.toUpperCase().indexOf(filter) > -1) {
+            tr[i].style.display = "";
+          } else {
+            tr[i].style.display = "none";
+          }
+        }
+      }
+    }
+  </script>
+
+{% endblock %}

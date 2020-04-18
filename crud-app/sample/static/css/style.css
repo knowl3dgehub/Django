@@ -1,0 +1,120 @@
+html, body, h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
+    /*height: 150% !important;*/
+    font-family: 'Josefin Sans' !important;
+}
+.caret{
+	vertical-align: text-top !important;
+}
+.highcharts-contextbutton{
+	display: none !important;
+}
+.chart-header{
+	text-align: center;
+	color :	#1ED3E1;
+}
+.highcharts-axis-title{
+	display: none !important;
+}
+.highcharts-credits{
+	display: none !important;
+}
+
+
+.headings{
+	font-size: 22px !important;
+	padding: 0px 5px 0px;
+}
+/*.app-logo{
+	display: block;
+    margin: -12px auto;
+    width: 45px;
+    height: 45px;
+}*/
+.logo-heading{
+	float: right;
+	margin: 0rem !important;
+	color: #1FCADD;
+}
+.btn-success{
+	background: linear-gradient(40deg, #23a2c7, #1af1f1) !important;
+    border: #1af1f1 !important;
+    width: 70px;
+    height: 35px;
+}
+.form-group {
+    margin: 0% 3% 5%!important;
+    position: relative !important;
+    
+}
+.panel-default{
+	margin: 3% 3% !important;
+}
+.card-content-create{
+	margin: 2% 2%;
+}
+.table-responsive{
+	margin: 0% 2% !important;
+}
+.navbar-default{
+	position: fixed !important;
+}
+.notification-menu{
+	margin-top: -25px !important;
+}
+.text-muted{
+	margin-top: -23px !important;
+}
+.footer-buttons{
+	margin: 0% 2% !important;
+}
+.footer-button{
+	margin: 0% 0% !important;
+}
+
+#header {
+	width: 100%;
+	height: auto;
+	padding: 10px 40px 17px !important;
+	background: #417690;
+	line-height: 40px;
+	color: #E2E3E5;
+	overflow: hidden;
+	background-color: #464D59;
+	border-color: #080808;
+	position: fixed;
+	z-index: 1;
+}
+
+.table-hover {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+td, th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+}
+
+tr:nth-child(even) {
+  background-color: #dddddd;
+}
+
+// Table SearchBox
+
+* {
+  box-sizing: border-box;
+}
+
+#myInput {
+  background-image: url('/css/searchicon.png');
+  background-position: 10px 10px;
+  background-repeat: no-repeat;
+  width: 100%;
+  font-size: 16px;
+  padding: 12px 20px 12px 40px;
+  border: 1px solid #22082f;
+  margin-bottom: 12px;
+
+

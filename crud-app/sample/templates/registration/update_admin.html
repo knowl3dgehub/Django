@@ -1,0 +1,27 @@
+  {% extends 'base.html' %}
+{% block page_heading %}
+                <div class="row">
+                    <div class="col-md-12" style="margin-top: 4rem;">
+                        <div class="card">
+                            <h1 class="page-header" id="cr">Update Admin Details</h1>
+{% endblock %}
+
+{% block content %}
+                             <div class="row">
+                               <form action="/update_admin/{{ object.id }}/" id="frm" method="post">{% csrf_token %}
+                                    {% csrf_token %}
+                                    {{form.as_p}}
+                                    <div class="form-group pull-right">
+                                            <button type="submit" class="btn btn-primary pull-right">Submit</button>
+                                            <a class="btn btn-primary pull-right" href="/list_admin/">Cancel</a>
+                                        <!--<a href="/list_charities/"><button class="btn btn-primary">Cancel</button></a>-->
+                                    </div>
+                                </form>
+                             </div>
+                        </div>
+
+                    </div>
+                </div>
+
+
+{% endblock %}

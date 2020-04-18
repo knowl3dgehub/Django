@@ -1,0 +1,17 @@
+  {% extends 'base.html' %}
+{% block page_heading %}
+<div class="row">
+    <div class="col-md-12" style="margin-top: 4rem;">
+
+
+{% endblock %}
+
+{% block content %}
+            <form method="post">{% csrf_token %}
+                <h2>Are you sure to delete "{{ object }}"?</h2>
+                 <input type="submit" value="Confirm" class="btn btn-danger pull-right" id="back" />
+                 <a class="btn btn-danger pull-right" id="bac" href="/list_admin/">Back</a>
+            </form>
+    </div>
+</div>
+{% endblock %}
